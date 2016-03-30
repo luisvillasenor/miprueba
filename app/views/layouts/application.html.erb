@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @titulo %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% #link_to "Ir a Alemania", :controller => "miprueba", :action => "alemania" %>
+<%= link_to_unless_current "Casa", :root %>
+<%= link_to_unless_current "Ir a Alemania", :controller => "miprueba", :action => "alemania" %>
+<%= link_to_unless_current "Ir a EEUU", :controller => "miprueba", :action => "eeuu" %>
+<%= link_to_unless_current "Ir a USUARIO", :controller => "usuario", :action => "index" %>
+<% #link_to_unless_current "Atras", :back %>
+
+
+<%= yield %>
+
+</body>
+</html>
